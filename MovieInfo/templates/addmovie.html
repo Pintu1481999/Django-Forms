@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        input[type=text] {
+          width: 50%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 2px solid red;    
+          border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    
+     <form action="/form_submission" method="post">
+        {% csrf_token %}
+        <div>
+            Movie Name: <input type="text" name="movie_name" minlength="2" maxlength="60">
+        </div>
+        <br>
+        <div>
+            Movie Description: <input type="text" name="movie_desc" minlength="2" maxlength="60">
+        </div>
+        <br>
+        <div>
+            Created Date: <input type="date" name="created_date" minlength="2" maxlength="60">
+        </div>
+        <br>
+        <div>
+            Movie Release Date: <input type="date" name="release_date" minlength="10" maxlength="60">
+        </div>
+        <br>
+        <div>
+            <input type="file" name="file">
+        </div>
+        <br>
+        <div>
+            <input type="submit">
+        </div>
+    </form> 
+</body>
+</html>
